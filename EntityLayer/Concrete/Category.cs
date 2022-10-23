@@ -10,9 +10,11 @@ namespace EntityLayer.Concrete
     public class Category
     {
         [Key]
-        public int CategoryId { get; set; }
+        public int CategoryID { get; set; }
         public string Name { get; set; }
         public string CategoryDescription { get; set; }
         public bool CategoryStatus { get; set; }
+
+        public List<Blog> Blogs { get; set; }
     }
 }

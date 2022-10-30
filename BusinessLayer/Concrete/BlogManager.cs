@@ -56,5 +56,10 @@ namespace BusinessLayer.Concrete
         {
             return _blogDal.GetListAll();
         }
+
+        public List<Blog> GetBlogListBytWriter()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

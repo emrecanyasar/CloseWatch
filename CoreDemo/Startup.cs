@@ -27,6 +27,8 @@ namespace CoreDemo
         {
             services.AddControllersWithViews();
 
+            services.AddSession();
+
             services.AddMvc(config =>
             {
                 var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser()
@@ -52,6 +54,8 @@ namespace CoreDemo
             app.UseStatusCodePagesWithReExecute("/ErrorPage/Error1", "?code={0}");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 
